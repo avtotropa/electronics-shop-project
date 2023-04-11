@@ -3,6 +3,7 @@
 import pytest
 from src.item import Item
 
+@pytest.fixture
 def test_calculate_total_price():
     # Тест 1: Количество 1, Цена 10.0
     item = Item("Тестовый Товар", 10.0, 1)
