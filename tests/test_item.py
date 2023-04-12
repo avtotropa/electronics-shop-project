@@ -3,6 +3,8 @@ import pytest
 from src.item import Item
 
 def test_calculate_total_price():
+    # Ожидаем значение с округленным значением до 2х знаков, после запятой
+    # Если у нас какого-то товара не целое число ;)
     item1 = Item("товар1", 10, 2)
     assert round(item1.calculate_total_price(), 2) == 20.0
 
