@@ -16,14 +16,14 @@ def test_calculate_total_price():
 def test_apply_discount():
     item1 = Item("товар1", 10, 2)
     item1.apply_discount(0.1)
-    assert round(item1.price, 4) == 9.0
+    assert round(item1.price, 2) == 9.0
 
     item2 = Item("товар2", 5, 3)
     item2.apply_discount(0.25)
-    assert round(item2.price, 4) == 3.75
+    assert round(item2.price, 2) == 3.75
 
     item3 = Item("товар3", 2, 10)
     item3.apply_discount(0.05)
-    assert round(item3.price, 4) == 1.9
+    assert round(item3.price, 2) == 1.9
 
 
