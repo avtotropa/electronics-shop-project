@@ -14,6 +14,7 @@ def test_calculate_total_price():
 
 
 def test_apply_discount():
+    # Ожидаем значение с округленным значением до 2х знаков, после запятой
     item1 = Item("товар1", 10, 2)
     item1.apply_discount(0.1)
     assert round(item1.price, 2) == 9.0
