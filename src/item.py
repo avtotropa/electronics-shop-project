@@ -58,7 +58,7 @@ class Item:
         """
         Класс-метод, инициализирующий экземпляры класса Item данными из файла src/items.csv.
         """
-        with open('items.csv', 'r') as file:
+        with open('items.csv', 'r', encoding='UTF-8') as file:
             reader = csv.DictReader(file)
             for row in reader:
                 cls.all.append(cls(row['name'], float(row['price']), int(row['quantity'])))
