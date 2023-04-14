@@ -32,7 +32,7 @@ def test_apply_discount():
 
 def test_instantiate_from_csv():
     # Подготовим csv-файл с данными для тестирования
-    with open('test_items.csv', 'w') as f:
+    with open('test_items.csv', 'w', encoding='cp1251') as f:
         f.write("name,price,quantity\n")
         f.write("товар1,10,2\n")
         f.write("товар2,5,3\n")
