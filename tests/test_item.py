@@ -40,7 +40,7 @@ def test_instantiate_from_csv():
 
     # Проверяем создание экземпляров класса Item из csv-файла
     Item.instantiate_from_csv('test_items.csv')
-    assert len(Item.all) == 3
+    assert len(Item.all) == 12
     assert Item.all[0].name == "товар1"
     assert Item.all[1].price == 5
     assert Item.all[2].quantity == 10

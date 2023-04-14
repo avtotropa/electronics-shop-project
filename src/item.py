@@ -54,14 +54,15 @@ class Item:
         self.price = self.price * (1 - discount)
 
     @classmethod
-    def instantiate_from_csv(cls) -> None:
+    def instantiate_from_csv(cls, filename='items.csv') -> None:
         """
         Класс-метод, инициализирующий экземпляры класса Item данными из файла src/items.csv.
         """
-        with open('items.csv', 'r', encoding='cp1251') as file:
+        with open(filename, 'r', encoding='cp1251') as file:
             reader = csv.DictReader(file)
             for row in reader:
                 cls.all.append(cls(row['name'], float(row['price']), int(row['quantity'])))
+
 
     @staticmethod
     def string_to_number(number: str) -> float:
