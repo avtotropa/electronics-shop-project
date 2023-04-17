@@ -54,7 +54,7 @@ class Item:
         self.price = self.price * (1 - discount)
 
     @classmethod
-    def instantiate_from_csv(cls, filename='items.csv') -> None:
+    def instantiate_from_csv(cls, filename='src/items.csv') -> None:
         """
         Класс-метод, инициализирующий экземпляры класса Item данными из файла src/items.csv.
         """

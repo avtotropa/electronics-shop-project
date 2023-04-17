@@ -61,3 +61,11 @@ def test_string_to_number():
     # Проверяем обработку ошибки при некорректном значении
     with pytest.raises(ValueError):
         Item.string_to_number("не число")
+
+def test_str_method():
+    item = Item("TestItem", 10.0, 5)
+    assert str(item) == "TestItem"
+
+def test_repr_method():
+    item = Item("TestItem", 10.0, 5)
+    assert repr(item) == "Item('TestItem', 10.0, 5)"
