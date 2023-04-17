@@ -63,9 +63,9 @@ def test_string_to_number():
         Item.string_to_number("не число")
 
 def test_str_method():
-    item = Item("TestItem", 10.0, 5)
-    assert str(item) == "TestItem"
+    item = Item("товар1", 10.0, 5)
+    assert str(item) == "товар1"
 
 def test_repr_method():
-    item = Item("TestItem", 10.0, 5)
-    assert repr(item) == "Item('TestItem', 10.0, 5)"
+    item = Item("товар1", 10.0, 5)
+    assert repr(item) == "Item('товар1', 10.0, 5)"
