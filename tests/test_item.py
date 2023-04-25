@@ -68,5 +68,5 @@ def test_str_method():
 
 def test_repr_method():
     item = Item("товар1", 10.0, 5)
-    assert repr(item) == "Item('товар1', 10.0, 5)"
+    assert repr(item) == "Phone('товар1', 10.0, 5)"
 
