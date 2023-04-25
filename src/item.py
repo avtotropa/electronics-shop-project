@@ -19,6 +19,7 @@ class Item:
         self.quantity = quantity
         # Item.all.append(self)
 
+
     @property
     def name(self) -> str:
         """
@@ -27,6 +28,8 @@ class Item:
         с помощью @property
         """
         return self.__name
+
+
 
     @name.setter
     def name(self, name: str) -> None:
@@ -52,6 +55,10 @@ class Item:
         :param discount: Скидка в процентах (например, 0.15 для 15% скидки).
         """
         self.price = self.price * (1 - discount)
+
+    def __add__(self, other):
+        if issubclass(other.__class__, self.__class__):
+            return self.quantity + other.quantity
 
     @classmethod
     def instantiate_from_csv(cls, filename='src/items.csv') -> None:
@@ -86,4 +93,6 @@ class Item:
         Возвращает строковое представление товара в магазине.
         :return: Строковое представление товара в магазине.
         """
-        return f"Item('{self.name}', {self.price}, {self.quantity})"
+        return f"Phone('{self.name}', {self.price}, {self.quantity})"
+
+
